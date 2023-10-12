@@ -12,7 +12,7 @@ const { isAuth } = require("../middlewares/isAuth");
 
 /**
  * @swagger
- * /users/signup:
+ * /auth/signup:
  *   post:
  *     tags:
  *       - Authentication
@@ -54,7 +54,7 @@ router.route("/signup").post(signUp);
 
 /**
  * @swagger
- * /users/login:
+ * /auth/login:
  *   post:
  *     tags:
  *       - Authentication
@@ -84,7 +84,7 @@ router.route("/login").post(login);
 
 /**
  * @swagger
- * /users/forgot-password:
+ * /auth/forgot-password:
  *   post:
  *     tags:
  *       - Authentication
@@ -113,7 +113,7 @@ router.route("/forgot-password").post(forgotPassword);
 
 /**
  * @swagger
- * /users/reset-password/{token}:
+ * /auth/reset-password/{token}:
  *   patch:
  *     tags:
  *       - Authentication
@@ -149,7 +149,7 @@ router.route("/reset-password/:token").patch(resetPassword);
 
 /**
  * @swagger
- * /users/update-password:
+ * /auth/update-password:
  *   patch:
  *     tags:
  *       - Users
