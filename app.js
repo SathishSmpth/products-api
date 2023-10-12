@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+const compression = require("compression");
 const globalError = require("./controller/error");
 const { swaggerUi, swaggerSpec } = require("./config/swagger");
 
@@ -13,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
+app.use(compression());
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();

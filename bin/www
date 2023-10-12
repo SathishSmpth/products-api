@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 dotenv.config();
 
 // const DB = process.env.MONGO_LOCAL_DATABASE;
-const DB = `mongodb+srv://sathishsmpth:${process.env.MONGO_CLOUD_DB_PASSWORD}@cluster0.hczhkdp.mongodb.net/e-commerce?retryWrites=true&w=majority`;
+const DB = `mongodb+srv://${process.env.MONGO_CLOUD_DB_USERNAME}:${process.env.MONGO_CLOUD_DB_PASSWORD}@cluster0.hczhkdp.mongodb.net/e-commerce?retryWrites=true&w=majority`;
 const port = process.env.APP_PORT || 3000;
 
 mongoose
